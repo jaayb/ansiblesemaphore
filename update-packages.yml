@@ -29,5 +29,8 @@
         - htop
         - git
         - mc
+        - wget
+        - curl
+        - chkservice
       state: latest
     when: ansible_distribution == "Ubuntu"
