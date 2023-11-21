@@ -1,8 +1,7 @@
 ---
 
 - hosts: all
-  become: true
-  sudo: true
+  become: yes
   pre_tasks:
 
   - name: install updates (Fedora)
