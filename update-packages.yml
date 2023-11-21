@@ -15,13 +15,13 @@
   - name: install updates (Fedora)
     dnf:
       update_only: yes
-      update_cache: yes
+   #   update_cache: yes
     when: ansible_distribution == "Fedora"
    
   - name: install updates (Ubuntu)
     apt:
       upgrade: dist
-      update_cache: yes
+   #   update_cache: yes
       autoremove: true
       autoclean: true
     when: ansible_distribution == "Ubuntu"
@@ -29,7 +29,7 @@
   - name: install updates (Debian)
     apt:
       upgrade: dist
-      update_cache: yes
+    #  update_cache: yes
       autoremove: true
       autoclean: true
     when: ansible_distribution == "Debian"
