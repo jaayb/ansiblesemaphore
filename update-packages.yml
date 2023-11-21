@@ -1,7 +1,7 @@
 ---
 
 - hosts: all
-  become: yes
+  become: true
   become_method: sudo
   pre_tasks:
   - name: packages | ensure apt list dir exists
