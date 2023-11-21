@@ -23,12 +23,16 @@
     apt:
       upgrade: dist
       update_cache: yes
+      autoremove: true
+      autoclean: true
     when: ansible_distribution == "Ubuntu"
 
   - name: install updates (Debian)
     apt:
       upgrade: dist
       update_cache: yes
+      autoremove: true
+      autoclean: true
     when: ansible_distribution == "Debian"
 
   - name: install base packages
