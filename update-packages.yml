@@ -3,14 +3,7 @@
 - hosts: all
   become: yes
   become_method: sudo
-  become_user: admin1
-  
-  pre_tasks:
-  - name: packages | ensure apt list dir exists
-    file:
-      path: /var/lib/apt/lists/
-      state: directory
-      mode: 0755
+  become_user: root
 
   tasks:
   - name: install updates (Fedora)
