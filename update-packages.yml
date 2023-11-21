@@ -2,8 +2,7 @@
 
 - hosts: all
   become: yes
-  become_user: admin1
-  become_method: su
+  become_method: sudo
   pre_tasks:
   - name: packages | ensure apt list dir exists
     file:
