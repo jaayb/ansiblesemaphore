@@ -6,12 +6,18 @@
   become_user: root
   pre_tasks:
 
+
   - name: install updates (Fedora)
     dnf:
       update_only: yes
       update_cache: yes
     when: ansible_distribution == "Fedora"
-
+  - name: packages | ensure apt list dir exists
+    file:
+      path: /var/lib/apt/lists/
+      state: directory
+      mode: 0755
+    
   - name: install updates (Ubuntu)
     apt:
       upgrade: dist
