@@ -3,8 +3,10 @@
 - hosts: all
   become: yes
   become_method: sudo
-  become_user: root
-
+  become_user: root 
+  connection: ssh
+  remote_user: admin1
+  
   tasks:
   - name: install updates (Fedora)
     dnf:
