@@ -2,8 +2,8 @@
 
 - hosts: all
   become: yes
-  become_method: sudo
-  become_user: root 
+  #become_method: sudo
+  #become_user: root 
   connection: ssh
   remote_user: admin1
   
