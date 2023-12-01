@@ -40,5 +40,10 @@
         - wget
         - curl
         - chkservice
+        - net-tools
+        - nmap
+        - duf
+        - jq
+        - tre
       state: latest
     when: ansible_distribution == "Ubuntu"
